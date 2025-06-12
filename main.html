@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Spots</title>
+    <style> 
+            
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://tse4.mm.bing.net/th?id=OIP.eAuPJIewjxpeP8u4QYOOAgHaDd&pid=Api&P=0&h=180');
+    background-size: cover;
+}
+
+header {
+    text-align: center;
+    color: rgb(245, 245, 240);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+section {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+section img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+section h2 {
+    font-weight: bold;
+    margin-top: 0;
+}
+
+section p {
+    font-size: 16px;
+    color: #666;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    clear: both;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ccc;
+}
+
+.social-media {
+    margin-top: 10px;
+}
+.social-media a {
+    margin-right: 10px;
+}
+
+.social-media i {
+    font-size: 24px;
+}
+nav {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    padding: 10px;
+    border: 1px solid #555;
+}
+
+nav ul li:hover ul {
+ display: block;
+}
+
+nav ul li ul li {
+    display: block;
+}
+
+.profile {
+    float: right;
+}
+
+.profile-link {
+    padding: 10px;
+}
+
+.profile-menu {
+    right: 0;
+    left: auto;
+}
+book-btn {
+    background-color: #4CAF50; 
+    color: #fff; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+
+.book-btn:hover {
+    background-color: #3e8e41; 
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="text-align: center; color: white; background-color: rgba(0, 0, 0, 0.5); padding: 20px;">FIND MY DESTINATION</h1>
+    </header>
+    <main>
+        <section style="background-color: rgba(255, 255, 255, 0.8); padding: 20px; margin: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+            <h2>Paris, France</h2>
+            <img src="https://tse4.mm.bing.net/th?id=OIP.vziZgynyOBTmaKh3pUKTsQHaEJ&pid=Api&P=0&h=180" alt="Paris" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px;">
+            <p>Paris, the capital of France, is a city steeped in history, art, and culture. Visit the Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral.</p>
+        <button class="book-btn">Book Tickets</button>
+        </section>
+        <section style="background-color: rgba(255, 255, 255, 0.8); padding: 20px; margin: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+            <h2>New York City, USA</h2>
+            <img src="https://tse3.mm.bing.net/th?id=OIP.Sf1kiERiiyeyWQxeQBtiVAHaE8&pid=Api&P=0&h=180" alt="New York City" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px;">
+            <p>New York City is a bustling metropolis with iconic landmarks like the Statue of Liberty, Central Park, and Times Square.</p>
+        <button class="book-btn">Book Tickets</button>
+        </section>
+        <section style="background-color: rgba(255, 255, 255, 0.8); padding: 20px; margin: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+            <h2>Tokyo, Japan</h2>
+            <img src="https://tse1.mm.bing.net/th?id=OIP.mGFHKvMQMj8q4EYTk4izkQHaFJ&pid=Api&P=0&h=180" alt="Tokyo" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px;">
+            <p>Tokyo is a vibrant city with a unique blend of traditional and modern culture. Visit the Tokyo Tower, Meiji Shrine, and Shibuya Crossing.</p>
+    <button class="book-btn">Book Tickets</button>
+     </section>
+     </main>
+    </body>
+     <script>
+        const bookButtons=document.querySelectorAll('.book-btn')
+        bookButtons.forEach(button =>{
+            button.addEventListener('click', function() {
+                window.location.href = 'details.html';
+             });
+            });
+    </script>
+    <nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Destinations</a>
+            <ul>
+                <li><a href="#">Europe</a></li>
+                <li><a href="#">Asia</a></li>
+                <li><a href="#">Africa</a></li>
+            </ul>
+        </li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li class="profile">
+            <a href="#" class="profile-link">Profile</a>
+            <ul class="profile-menu">
+                <li><a href="#">My Account</a></li>
+                <li><a href="#">My Bookings</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+     <footer>
+    <p>&copy; ~LOOPERS</p>
+    <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Terms and Conditions</a></li>
+    </ul>
+</footer>
+</html>
